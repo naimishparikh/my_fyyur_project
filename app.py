@@ -102,7 +102,7 @@ app.jinja_env.filters['datetime'] = format_datetime
 @app.route('/')
 def index():
 
-#Recently added artists and venues. last 10
+#Recently added artists and venues. last 10 . STAND OUT SUBMISSION
 
   venues = Venue.query.order_by(desc(Venue.dateCreated))
   artists = Artist.query.order_by(desc(Artist.dateCreated))
@@ -629,7 +629,7 @@ def create_show_submission():
 
 @app.route('/cssearch', methods=['POST'])
 def cssearch():
-#search artists and venues by city,state
+#search artists and venues by city,state. STAND OUT SUBMISSION
   cs = request.form.get('citystate')
   csList = cs.split(",")
   csVenueList = []
